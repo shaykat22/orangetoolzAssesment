@@ -1,13 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
+
+    <!-- Header start -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#home">Balance: <span>$125</span></a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sidebar">
+        <div class="logo-details">
+            <img src="./images/logo-removebg-preview.png" height="40px" width="40px" alt="">
+            <p>CarrierLookup</p>
+            <small>Accurate Carrier Info</small>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-grid-alt' style='color:#7d7d7e'></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/Vector.png" alt="">
+                    <span>Lookup</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-layer' style='color:#7d7d7e'></i>
+                    <span>Files</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/XMLID_228_.png" alt="">
+                    <span>Logos</span>
+                </a>
+            </li>
+            <li><a class="dropdown-btn">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-container">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div></li>
+            <li>
+                <a href="#">
+                    <img src="./images/Vector2.png" alt="">
+                    <span>Buy Credits</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./images/Vector (1).png" alt="">
+                    <span>Integrations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user' style='color:#7d7d7e'></i>
+                    <span>My Profile</span>
+                </a>
+            </li>
+        </ul>
+    </section>
     
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+    </script>
 </body>
-</html>git init
+
+</html>
