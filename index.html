@@ -10,29 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./switch.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-    <!-- Header start -->
-    <header>
-        <nav class="navbar">
-
-            <a href="#home">Balance: <span>$125</span></a>
-
-            <div class="dropdown">
-                <button class="dropbtn">Dropdown
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Sidebar start -->
 
     <section class="sidebar">
         <div class="logo-details">
@@ -60,19 +44,17 @@
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img src="./images/XMLID_228_.png" alt="">
-                    <span>Logos</span>
+                <a class="dropdown-btn"><i class='bx bxs-file-txt'><span>logs</span><i
+                            class='bx bx-chevron-down'></i></i>
+                    <!-- <img src="./images/XMLID_228_.png" alt="">
+                    <span>Logos</span> -->
                 </a>
+                <div class="dropdown-container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </li>
-            <li><a class="dropdown-btn">Dropdown 
-                <i class="fa fa-caret-down"></i>
-              </a>
-              <div class="dropdown-container">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div></li>
             <li>
                 <a href="#">
                     <img src="./images/Vector2.png" alt="">
@@ -93,23 +75,123 @@
             </li>
         </ul>
     </section>
-    
-<script>
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-    
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
+    <!-- sidebar end -->
+
+    <!-- main body start -->
+    <section class="home-section">
+
+        <!-- Home-section Navbar -->
+        <nav class="navbar">
+            <p>Balance: <span>$125</span></p>
+            <div class="user-profile">
+                <img src="./images/unsplash_6W4F62sN_yI.png" alt="" height="40px" width="40px">
+                <p>Alexa Jui <span><i class='bx bx-chevron-down'></i></span></p>
+            </div>
+            </div>
+        </nav>
+        <!-- Home section Card -->
+        <div class="card-section">
+            <!-- user profile card  -->
+            <div class="user-card">
+                <img src="./images/unsplash_6W4F62sN_yI (1).png" alt="">
+                <h3>Alexa Jui</h3>
+                <p>alexajui@gmail.com</p>
+                <p>+1 354 785 4125</p>
+                <p>3213 D Street, Columbus, USA</p>
+            </div>
+            <!-- Credit card -->
+            <div class="credit-card-section">
+                <h2 class="card-title">Your Credit Cards</h2>
+                <div class="card">
+                    <div class="credit-card1">
+                        <button id="trash"><i class='bx bx-trash'></i></button>
+                        <h3>Credit Card 1</h3>
+                        <p>xxxxxxxxxxxx4684</p>
+                    </div>
+                    <div class="credit-card2">
+                        <button id="trash"><i class='bx bx-trash' style='color:#ff7901'></i></button>
+                        <h3>Credit Card 2 (Default)</h3>
+                        <p>xxxxxxxxxxxx4684</p>
+                    </div>
+                    <div class="credit-card3">
+                        <button id="trash"><i class='bx bx-trash'></i></button>
+                        <h3>Credit Card 3</h3>
+                        <p>xxxxxxxxxxxx4684</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Section Content -->
+        <div class="home-content">
+            <div class="title">
+                <div class="content-title">
+                    <p>Update Profile</p>
+                    <p>Change Password</p>
+                    <p>Email Notifications</p>
+                    <p>Auto Recharge Settings</p>
+                </div>
+            </div>
+            <div class="email-content">
+                <li>
+                    <label class="toggle">
+                        <input class="toggle-checkbox" type="checkbox" checked>
+                        <div class="toggle-switch"></div>
+                        <span class="toggle-label">Notify me when list verification completes</span>
+                      </label>
+                </li>
+                <li>
+                    <label class="toggle">
+                        <input class="toggle-checkbox" type="checkbox" checked>
+                        <div class="toggle-switch"></div>
+                        <span class="toggle-label"> Notify me when list export completes</span>
+                      </label>
+                </li>
+                <li>
+                    <label class="toggle">
+                        <input class="toggle-checkbox" type="checkbox" checked>
+                        <div class="toggle-switch"></div>
+                        <span class="toggle-label">Notify me when list verification result is about to expire</span>
+                      </label>
+                </li>
+                <li>
+                    <label class="toggle">
+                        <input class="toggle-checkbox" type="checkbox" checked>
+                        <div class="toggle-switch"></div>
+                        <span class="toggle-label">Receive Low Credits Email</span>
+                      </label>
+                </li>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
         }
-      });
-    }
     </script>
 </body>
 
