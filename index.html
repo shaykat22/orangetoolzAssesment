@@ -28,49 +28,51 @@
             <li>
                 <a href="#">
                     <i class='bx bxs-grid-alt' style='color:#7d7d7e'></i>
-                    <span>Dashboard</span>
+                    <span class="option-name">Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="./images/Vector.png" alt="">
-                    <span>Lookup</span>
+                    <i class='bx bx-search bx-rotate-90' style='color:#7d7d7e'></i>
+                    <span class="option-name">Lookup</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bxs-layer' style='color:#7d7d7e'></i>
-                    <span>Files</span>
+                    <span class="option-name">Files</span>
                 </a>
             </li>
+            
+                <li >
+                    <a class="dropdown-btn"><i class='bx bxs-file-txt'><span class="option-name">logs</span><i
+                                class='bxbx-chevron-down arrow'></i></i>
+                    </a>
+                    <div class="submenu">
+                        <a href="#">
+                            ABC
+                        </a><a href="#">ABCD</a>
+                    </div>
+    
+    
+                </li>
+            
             <li>
-                <a class="dropdown-btn"><i class='bx bxs-file-txt'><span>logs</span><i
-                            class='bx bx-chevron-down'></i></i>
-                    <!-- <img src="./images/XMLID_228_.png" alt="">
-                    <span>Logos</span> -->
+                <a href="#">
+                    <i class='bx bxs-offer bx-rotate-270' style='color:#7d7d7e'></i>
+                    <span class="option-name">Buy Credits</span>
                 </a>
-                <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
             </li>
             <li>
                 <a href="#">
-                    <img src="./images/Vector2.png" alt="">
-                    <span>Buy Credits</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="./images/Vector (1).png" alt="">
-                    <span>Integrations</span>
+                    <i class='bx bxs-virus' style='color:#7d7d7e'></i>
+                    <span class="option-name">Integrations</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bxs-user' style='color:#7d7d7e'></i>
-                    <span>My Profile</span>
+                    <span class="option-name">My Profile</span>
                 </a>
             </li>
         </ul>
@@ -83,15 +85,28 @@
         <!-- Home-section Navbar -->
         <nav class="navbar">
             <p>Balance: <span>$125</span></p>
-            <div class="user-profile">
-                <img src="./images/unsplash_6W4F62sN_yI.png" alt="" height="40px" width="40px">
-                <p>Alexa Jui <span><i class='bx bx-chevron-down'></i></span></p>
-            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="profile-btn">
+                    <img src="./images/unsplash_6W4F62sN_yI.png" alt="" height="40px" width="40px">Alexa Jui <i
+                        class='bx bx-chevron-down'></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="first" href="#home">My Profile</a>
+                    <a href="#about">Add Fund</a>
+                    <a href="#contact">Api Documentation</a>
+                    <a href="#logout">Log Out</a>
+                    <button class="log-btn"><span><i class='bx bx-log-out'></i></span> Log Out</button>
+                </div>
             </div>
         </nav>
+
+
         <!-- Home section Card -->
+
         <div class="card-section">
+
             <!-- user profile card  -->
+
             <div class="user-card">
                 <img src="./images/unsplash_6W4F62sN_yI (1).png" alt="">
                 <h3>Alexa Jui</h3>
@@ -128,7 +143,7 @@
                 <div class="content-title">
                     <p>Update Profile</p>
                     <p>Change Password</p>
-                    <p>Email Notifications</p>
+                    <p class="title-design">Email Notifications</p>
                     <p>Auto Recharge Settings</p>
                 </div>
             </div>
@@ -138,30 +153,43 @@
                         <input class="toggle-checkbox" type="checkbox" checked>
                         <div class="toggle-switch"></div>
                         <span class="toggle-label">Notify me when list verification completes</span>
-                      </label>
+                    </label>
                 </li>
                 <li>
                     <label class="toggle">
                         <input class="toggle-checkbox" type="checkbox" checked>
                         <div class="toggle-switch"></div>
                         <span class="toggle-label"> Notify me when list export completes</span>
-                      </label>
+                    </label>
                 </li>
                 <li>
                     <label class="toggle">
                         <input class="toggle-checkbox" type="checkbox" checked>
                         <div class="toggle-switch"></div>
                         <span class="toggle-label">Notify me when list verification result is about to expire</span>
-                      </label>
+                    </label>
                 </li>
-                <li>
-                    <label class="toggle">
-                        <input class="toggle-checkbox" type="checkbox" checked>
-                        <div class="toggle-switch"></div>
-                        <span class="toggle-label">Receive Low Credits Email</span>
-                      </label>
-                </li>
-                
+                <div class="border">
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" checked>
+                            <div class="toggle-switch"></div>
+                            <span class="toggle-label">Receive Low Credits Email</span>
+                        </label>
+
+                    </li>
+                    <div class="credit-input">
+                        <div class="input-box">
+                            <p>Send Email to</p>
+                            <input type="email" placeholder="alexajui@gmail.com" id="input">
+                        </div>
+                        <div class="input-box">
+                            <p>When credits are less than</p>
+                            <input type="text" id="input" placeholder="50">
+                        </div>
+                    </div>
+                </div>
+                <button>Save Changes</button>
             </div>
         </div>
     </section>
@@ -177,21 +205,40 @@
 
 
     <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
+        // function myFunction() {
+        //     document.getElementById("myDropdown").classList.toggle("show");
+        // }
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
+        // // Close the dropdown if the user clicks outside of it
+        // window.onclick = function (event) {
+        //     if (!event.target.matches('.profile-btn')) {
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //             var openDropdown = dropdowns[i];
+        //             if (openDropdown.classList.contains('show')) {
+        //                 openDropdown.classList.remove('show');
+        //             }
+        //         }
+        //     }
+        // }
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+
     </script>
 </body>
 

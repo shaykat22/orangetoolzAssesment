@@ -18,7 +18,8 @@
   }
   .toggle-switch:before {
     display: block;
-    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    
+    background:#FF7901;
     border-radius: 50%;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
     width: 22px;
@@ -33,7 +34,8 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
   }
   .toggle-checkbox:checked + .toggle-switch {
-    background: #56c080;
+    background: #FF7901;
+    border-radius: 30px;
   }
   .toggle-checkbox:checked + .toggle-switch:before {
     left: 20px;
