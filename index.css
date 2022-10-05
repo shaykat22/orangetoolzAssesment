@@ -37,7 +37,7 @@ body {
 
 }
 
-.sidebar li,
+.sidebar li a,
 .dropdown-btn {
     display: block;
     list-style: none;
@@ -46,43 +46,24 @@ body {
 }
 
 .submenu {
-
     display: none;
-    background-color: #262626;
-    padding-left: 8px;
+    padding-left: 0px;
 }
-
 .submenu a {
     display: block;
 }
 
 /* Add an active class to the active dropdown button */
 .active {
-
     color: #FF7901;
 }
-
-/* .sidebar li a .otion-name{
-    font-size: 16px;
-    font-weight: 400;
-    white-space: nowrap;
+.sidebar ul{
+    list-style: none;
 }
-.sidebar  li.showMenu i.arrow{
-    transform: rotate(-180deg);
-  }
-  .sidebar.close i.arrow{
-    display: none;
-  } */
-
-
-
-
 .sidebar li a {
     text-decoration: none;
     color: #7D7D7E;
-    height: 100%;
     width: 100%;
-    display: block;
     align-items: center;
     transition: all ease 0.4ms;
 }
@@ -97,18 +78,6 @@ body {
     color: #FF7901 !important;
 }
 
-
-/* .sidebar .active ~ .home-section{
-    width: calc(100% - 60px);
-    left: 60px;
-} */
-
-/* .dropdown-container {
-    display: block;
-    flex-direction: column;
-
-} */
-
 /* Home section */
 
 .home-section {
@@ -120,10 +89,7 @@ body {
     left: 224px;
 }
 
-/* .home-section .active ~ .navbar{
-    width: calc(100% - 60);
-    left: 60px;
-} */
+
 .navbar {
     display: flex;
     justify-content: end;
@@ -397,54 +363,44 @@ body {
 }
 
 /* Media Query For Medium Device */
-@media only screen and (max-width: 768px) {
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
     .credit-input {
         display: flex;
         flex-direction: column;
     }
-
     .home-section {
         width: calc(100vw - 70px);
         left: 70px;
         overflow-wrap: break-word;
     }
-
     .navbar {
         width: calc(100% - 70px);
         left: 70px;
     }
-
     .sidebar span {
         display: none;
     }
-
     .sidebar {
-
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 70px;
     }
-
     .sidebar ul {
         padding-left: 0;
     }
-
     .sidebar li a {
         font-size: 25px;
     }
-
     .sidebar .logo-details img {
         height: 30px;
         width: 30px;
     }
-
     .logo-details p {
         font-size: 10px;
     }
-
     .logo-details small {
-
         font-size: 6px;
     }
 
@@ -503,5 +459,91 @@ body {
 
     .title p {
         font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 768px){
+
+    .home-section {
+        width: calc(100vw - 60px);
+        left: 60px;
+        overflow-wrap: break-word;
+    }
+    .navbar {
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+    .card-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .user-card{
+        width: auto;
+    }
+    .credit-card-section{
+        height: max-content;
+       
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+    .card-title{
+        text-align: center;
+    }
+    .sidebar span {
+        display: none;
+    }
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60px;
+    }
+    .sidebar ul {
+        padding-left: 0;
+    }
+    .sidebar li a {
+        font-size: 25px;
+    }
+    .sidebar .logo-details img {
+        height: 30px;
+        width: 30px;
+    }
+    .logo-details p {
+        font-size: 10px;
+    }
+    .logo-details small {
+        font-size: 6px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar .profile-btn {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        min-width: 160px;
+    }
+
+    .dropdown-content a {
+        font-size: 12px;
+        height: 10px;
+    }
+
+    .dropdown-content .log-btn {
+        width: 100%;
+        margin: auto;
+    }
+    .credit-input{
+        display: flex;
+        flex-direction: column;
     }
 }
