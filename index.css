@@ -52,9 +52,13 @@ body {
     padding-left: 8px;
 }
 
+.submenu a {
+    display: block;
+}
+
 /* Add an active class to the active dropdown button */
 .active {
-    
+
     color: #FF7901;
 }
 
@@ -84,7 +88,7 @@ body {
 }
 
 .sidebar li a span {
-   
+
     margin-left: 22px;
     font-size: 14px;
 }
@@ -390,4 +394,114 @@ body {
     box-shadow: 0px 20px 50px rgba(255, 121, 1, 0.3);
     border-radius: 5px;
     margin-bottom: 50px;
+}
+
+/* Media Query For Medium Device */
+@media only screen and (max-width: 768px) {
+    .credit-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-section {
+        width: calc(100vw - 70px);
+        left: 70px;
+        overflow-wrap: break-word;
+    }
+
+    .navbar {
+        width: calc(100% - 70px);
+        left: 70px;
+    }
+
+    .sidebar span {
+        display: none;
+    }
+
+    .sidebar {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
+    }
+
+    .sidebar ul {
+        padding-left: 0;
+    }
+
+    .sidebar li a {
+        font-size: 25px;
+    }
+
+    .sidebar .logo-details img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .logo-details p {
+        font-size: 10px;
+    }
+
+    .logo-details small {
+
+        font-size: 6px;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .navbar .profile-btn {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        min-width: 160px;
+    }
+
+    .dropdown-content a {
+        font-size: 12px;
+        height: 10px;
+    }
+
+    .dropdown-content .log-btn {
+        width: 100%;
+        margin: auto;
+    }
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-card {
+        width: auto;
+        margin-right: 15px;
+    }
+
+    .card-title {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .card h3 {
+        font-size: 15px;
+    }
+
+    .credit-card-section {
+        width: 90%;
+        padding: 0 10px 5px 10px;
+    }
+
+    .home-content {
+        margin: 0 18px 30px 30px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
 }
