@@ -3,9 +3,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-
 }
-
 
 /* Sidebar Css */
 .sidebar {
@@ -14,7 +12,6 @@ body {
     height: 100vh;
     width: 224px;
     background-color: #000000;
-    /* z-index: 2; */
 }
 
 .sidebar .active {
@@ -34,7 +31,6 @@ body {
 
 .logo-details small {
     font-size: 9px;
-
 }
 
 .sidebar li a,
@@ -89,7 +85,7 @@ body {
     left: 224px;
 }
 
-
+/* home nav css */
 .navbar {
     display: flex;
     justify-content: end;
@@ -278,11 +274,10 @@ body {
     background: #FFD7D7;
 }
 
-/* Home section Contetnt start */
+/* Home section body Contetnt css */
 
 .home-content {
     background: #FFFFFF;
-    /* #F2F2F4 */
     margin: 0 30px 30px 30px;
     border: 1px solid #F2F2F4;
     border-radius: 10px;
@@ -329,11 +324,9 @@ body {
     position: relative;
     justify-content: space-evenly;
     margin: 15px;
-
 }
 
 #input {
-
     background: #FFFFFF;
     width: 250px;
     height: 60px;
@@ -462,7 +455,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 768px){
+@media only screen and (min-width: 300px) and (max-width: 768px){
 
     .home-section {
         width: calc(100vw - 60px);
